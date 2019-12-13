@@ -1,5 +1,5 @@
 node {
-stage (‘SCM checkout’){
+stage ([‘SCM checkout’]){
 git “https://gitlab.com/mbabilo/experitest”
 }
 stage (‘Build’){
