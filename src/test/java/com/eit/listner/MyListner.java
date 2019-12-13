@@ -42,8 +42,8 @@ public class MyListner implements ITestListener {
 TakesScreenshot ts = (TakesScreenshot) base.driv;
   File src = ts.getScreenshotAs(OutputType.FILE);
   try {
-   FileUtils.copyFile(src, new File("E:\\REPORT\\Screenshot\\" + result.getMethod().getMethodName() + ".png"));
-   String file = test.addScreenCapture("E:\\REPORT\\Screenshot\\" + result.getMethod().getMethodName() + ".png");
+   FileUtils.copyFile(src, new File("E:\\Eit_track\\REPORT\\Screenshot" + result.getMethod().getMethodName() + ".png"));
+   String file = test.addScreenCapture("E:\\Eit_track\\REPORT\\Screenshot" + result.getMethod().getMethodName() + ".png");
    test.log(LogStatus.FAIL, result.getMethod().getMethodName() + "test is failed", file);
    test.log(LogStatus.FAIL, result.getMethod().getMethodName() + "test is failed", result.getThrowable().getMessage());
   } catch (IOException e) {
@@ -61,7 +61,7 @@ TakesScreenshot ts = (TakesScreenshot) base.driv;
   System.out.println("on start");// Set the drivers path in environment variables to avoid code(System.setProperty())
 
   try {
-	FileUtils.forceDelete(new File("E:\\REPORT\\Screenshot"));
+	FileUtils.forceDelete(new File("E:\\Eit_track\\REPORT\\Screenshot"));
 } catch (IOException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
