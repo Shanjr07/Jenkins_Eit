@@ -15,3 +15,4 @@ node('slave-node-01') {
       sh 'run-infrastructure-tests.sh'
       sh 'run-selenium-tests.sh'
     }
+}
