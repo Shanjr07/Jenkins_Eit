@@ -1,26 +1,22 @@
-pipeline {
-agent any&lt;/code&gt;
- 
-tools{
-maven 'maven 3'
-jdk 'java 8'
-}
- 
-stages {
-stage ("initialize") {
-steps {
-sh '''
-echo "PATH = ${PATH}"
-echo "M2_HOME = ${M2_HOME}"
-'''
-}
-}
-stage ('Build project') {
-steps {
-dir("project_templates/java_project_template") 
-{
-sh 'mvn clean verify
- 
-}
-}
+node {
+   stage('Git checkout') { // for display purposes
+      git 'https://github.com/Shanjr07/Jenkins_Eit.git'
+   }
+   stage('Smoke') {
+        try {
+            sh "mvn clean verify -Dtags='type:Smoke'"
+        } catch (err) {
+            
+        } finally {
+            publishHTML (test-output: [
+            reportDir: 'test-output',
+            reportFiles: 'index.html',
+            reportName: "Smoke tests report"
+            ])
+        }
+   }
+   
+   stage('Results') {
+      junit '**/test-output/*.xml'
+   }
 }
