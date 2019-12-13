@@ -1,13 +1,17 @@
-node {
-stage (‘SCM checkout’){
-git “https://gitlab.com/mbabilo/experitest”
-}
-stage (‘Build’){
-dir(“comtest”) {
-sh “mvn clean install”
-}
-dir(“comtest/target”) {
-sh “java -jar com.test-1.0-SNAPSHOT.jar”
-}
-}
-}
+node('slave-node-01') {
+  stage 'Checkout'
+    checkout scm
+    sh 'pipeline/prepare-gems.sh'
+
+  stage 'Commit'
+    parallel 'Static Analysis and Local Testing': {
+      sh 'pipeline/run-static-analysis.sh'
+      sh 'pipeline/run-unit-tests.sh'
+    }
+
+  stage 'Acceptance'
+    sh 'launch-environment-acceptance.sh'
+    parallel 'Acceptance Testing': {
+      sh 'run-infrastructure-tests.sh'
+      sh 'run-selenium-tests.sh'
+    }
