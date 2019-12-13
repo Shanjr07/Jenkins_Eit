@@ -9,9 +9,9 @@ node {
             
         } finally {
             publishHTML (test-output: [
-            reportDir: 'test-output',
-            reportFiles: 'index.html',
-            reportName: "Smoke tests report"
+            (reportDir): 'test-output',
+            (reportFiles): 'index.html',
+            (reportName): "Smoke tests report"
             ])
         }
    }
