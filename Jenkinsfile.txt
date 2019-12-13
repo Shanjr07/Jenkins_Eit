@@ -7,14 +7,7 @@ node {
             sh "mvn clean verify -Dtags='type:Smoke'"
         } catch (err) {
             
-        } finally {
-            publishHTML (test-output: [
-            (reportDir): 'test-output',
-            (reportFiles): 'index.html',
-            (reportName): "Smoke tests report"
-            ])
-        }
-   }
+        } 
    
    stage('Results') {
       junit '**/test-output/*.xml'
