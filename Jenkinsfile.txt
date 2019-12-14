@@ -11,7 +11,7 @@ pipeline {
                 sh 'make test'
 
                 script {
-                    def testResults = findFiles(glob: 'build/reports/**/*.xml')
+                    def testResults = findFiles(glob: 'test-output/*.xml')
                     for(xml in testResults) {
                         touch xml.getPath()
                     }
@@ -20,10 +20,5 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
-            junit 'build/reports/**/*.xml'
-        }
-    }
+    
 }
