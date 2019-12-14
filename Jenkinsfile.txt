@@ -1,15 +1,29 @@
-node {
-   stage('Git checkout') { // for display purposes
-      git 'https://github.com/Shanjr07/Jenkins_Eit.git'
-   }
-   stage('Smoke') {
-        try {
-            sh "mvn clean verify -Dtags='type:Smoke'"
-        } catch (err) {
-            
-        } 
-                  }
-   stage('Results') {
-      junit '**/test-output/*.xml'
-   }
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh 'make build'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'make test'
+
+                script {
+                    def testResults = findFiles(glob: 'build/reports/**/*.xml')
+                    for(xml in testResults) {
+                        touch xml.getPath()
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
+            junit 'build/reports/**/*.xml'
+        }
+    }
 }
