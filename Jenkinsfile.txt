@@ -1,11 +1,12 @@
-node {
+#!groovy
 
-stage (‘Build’){
-dir(“com.test”) {
+node('master') {
+    stage('Checkout') {
+        echo 'Code checkout'
+    }
+    
+    stage('Run tests') {
+        echo 'Running tests'
 sh “mvn clean install”
-}
-dir(“com.test/test-output”) {
-sh “testng.xml”
-}
-}
+    }
 }
