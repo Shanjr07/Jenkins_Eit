@@ -4,8 +4,8 @@ stage (‘Build’){
 dir(“com.test”) {
 sh “mvn clean install”
 }
-dir(“com.test/target”) {
-sh “java -jar com.test1.0SNAPSHOT.jar”
+dir(“com.test/test-output”) {
+sh “testng.xml”
 }
 }
 }
