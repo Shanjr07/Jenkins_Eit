@@ -61,12 +61,12 @@ TakesScreenshot ts = (TakesScreenshot) base.driv;
   System.out.println("on start");// Set the drivers path in environment variables to avoid code(System.setProperty())
 
   try {
-	FileUtils.forceDelete(new File("E:\\Eit_track\\REPORT\\Screenshot"));
+	FileUtils.forceDelete(new File("C:\\Users\\EIT-JAGADESHAN\\.jenkins\\workspace\\Maven_Eit\\REPORT\\Screenshot\\"));
 } catch (IOException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
-  reports = new ExtentReports("E:\\Eit_track\\REPORT\\Screenshot\\Extend-reports.html");
+  reports = new ExtentReports("C:\\Users\\EIT-JAGADESHAN\\.jenkins\\workspace\\Maven_Eit\\REPORT\\Screenshot\\Extend-reports.html");
  }
  public void onFinish(ITestContext context) {
   System.out.println("on finish");
