@@ -1,24 +1,11 @@
-pipeline {
-    agent any
-    stages {
-        stage('Build') {
-            steps {
-                sh 'make build'
-            }
-        }
-        stage('Test') {
-            steps {
-                sh 'make test'
+node {
 
-                script {
-                    def testResults = findFiles(glob: 'test-output/*.xml')
-                    for(xml in testResults) {
-                        touch xml.getPath()
-                    }
-                }
-            }
-        }
-    }
-
-    
+stage (‘Build’){
+dir(“com.test”) {
+sh “mvn clean install”
+}
+dir(“com.test/target”) {
+sh “java -jar com.test1.0SNAPSHOT.jar”
+}
+}
 }
