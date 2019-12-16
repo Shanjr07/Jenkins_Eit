@@ -42,8 +42,8 @@ public class MyListner implements ITestListener {
 TakesScreenshot ts = (TakesScreenshot) base.driv;
   File src = ts.getScreenshotAs(OutputType.FILE);
   try {
-   FileUtils.copyFile(src, new File("C:\\Users\\EIT-JAGADESHAN\\.jenkins\\workspace\\Maven_Eit\\REPORT\\Screenshot" + result.getMethod().getMethodName() + ".png"));
-   String file = test.addScreenCapture("C:\\Users\\EIT-JAGADESHAN\\.jenkins\\workspace\\Maven_Eit\\REPORT\\Screenshot" + result.getMethod().getMethodName() + ".png");
+   FileUtils.copyFile(src, new File("C:\\Users\\EIT-JAGADESHAN\\.jenkins\\workspace\\Maven_Eit\\REPORT\\Screenshot\\" + result.getMethod().getMethodName() + ".png"));
+   String file = test.addScreenCapture("C:\\Users\\EIT-JAGADESHAN\\.jenkins\\workspace\\Maven_Eit\\REPORT\\Screenshot\\" + result.getMethod().getMethodName() + ".png");
    test.log(LogStatus.FAIL, result.getMethod().getMethodName() + "test is failed", file);
    test.log(LogStatus.FAIL, result.getMethod().getMethodName() + "test is failed", result.getThrowable().getMessage());
   } catch (IOException e) {
