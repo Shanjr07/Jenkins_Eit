@@ -295,7 +295,7 @@ public class Login_page_test_case extends base {
 				 Reporter.log("closed");
 		   }*/
 	   public void closee() throws InterruptedException {
-		driv.close();
+	
 			driv.quit();
 	   }
 	  
