@@ -55,7 +55,7 @@ public class EmailREport implements IReporter {
 			eReport.delete();
 			System.out.println("Deleted");
 		}*/
-        return new PrintWriter(new BufferedWriter(new FileWriter(new File(outdir, "TestNG-emailable-report-with-Screenshot.html"))));
+        return new PrintWriter(new BufferedWriter(new FileWriter(new File(outdir, "TestNG-emailable-report.html"))));
 
     }
 
