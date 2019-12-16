@@ -24,7 +24,7 @@
     <listener class-name="com.eit.listner.EmailREport" />
     
         <listener class-name="com.eit.listner.MyListner" />
-
+<listener class-name="com.eit.test.Execute_All_retry"/>
       
   </listeners>
        <test name="Login_TestCase">
