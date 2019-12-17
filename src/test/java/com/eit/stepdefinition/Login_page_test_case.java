@@ -53,7 +53,7 @@ public class Login_page_test_case extends base {
 	   send(s2,page1.getUsername());
 	   send(s3,page1.getPassword());
 	   page1.getLogin().click();
-	   Thread.sleep(1450);
+	   tablewait();
 	   String text = page1.getErrormess().getAttribute("textContent");
 	   Assert.assertTrue(text.equals("Enter Correct Password"),"English_Login_with_incorrect_Password = Expected result : Enter Correct Password ->But it shows :"+text);	   
 	   langu(page1.getLang()).selectByIndex(2);
@@ -134,7 +134,7 @@ public class Login_page_test_case extends base {
 		   clickaction(page1.getForget());
 		   send(s3,page1.getEmail());
 		   clickaction(page1.getSubmit());
-		   Thread.sleep(1000);
+		   tablewait();
 		   String text = page1.getErrormess().getAttribute("textContent");
 		   Assert.assertTrue(text.equals("Enter Correct Corporate Id or User name"),"English_ForgetPassword_with_incorrect_Corporate_ID_or_User_name Expected result :It should show [Enter Correct Corporate Id or User name] but it shows "+text);
 		   langu(page1.getLang()).selectByIndex(2);
@@ -145,7 +145,7 @@ public class Login_page_test_case extends base {
 		   clickaction(page1.getForget());
 		   send(s3,page1.getEmail());
 		   clickaction(page1.getSubmit());
-		   Thread.sleep(1000);
+		   tablewait();
 		   String text2 = page1.getErrormess().getAttribute("textContent");
 		   Assert.assertTrue(text2.equals("أدخل معرف الشركة صالح"),"Arabic_ForgetPassword_with_incorrect_Corporate_ID_or_User_name Expected result :It should show [ أدخل معرف الشركة أو اسم المستخدم صالح ] but it shows "+text2);	   
 		   } 
@@ -165,14 +165,14 @@ public class Login_page_test_case extends base {
 		    	else if(i==2) {mail="ghi@gmail.com";}
 		    send(mail,page1.getEmail());
 			clickaction(page1.getSubmit());
-			Thread.sleep(4000);
+			tablewait();
 			String text = page1.getErrormess().getAttribute("textContent");
 		    Assert.assertTrue(text.equals("Please Enter the Correct Registered Email Id"),"English_Forget_password_Entering_invalid_Email_ID_and_clicking_Submit_button_3_times_sequentially_and_after_that_enter_valid_Email_Id_and_click_Submit_enter_the_received_password_and_Click_login Expected Result : it should show [Please Enter the Correct Registered Email Id] but it shows "+text);
 		    page1.getEmail().clear();
 		   }
 		   send(s3,page1.getEmail());
 			clickaction(page1.getSubmit());
-			Thread.sleep(5000);
+			tablewait();
 			String text = page1.getErrormess().getAttribute("textContent");
 		    Assert.assertTrue(text.equals("Password has been sent to your Email Successfully .  Please check your Inbox"),"English_Forget_password_Entering_invalid_Email_ID_and_clicking_Submit_button_3_times_sequentially_and_after_that_enter_valid_Email_Id_and_click_Submit_enter_the_received_password_and_Click_login Expected Result : it should show [Password has been sent to your Email Successfully .  Please check your Inbox] but it shows "+text);
 		    URLmail();
@@ -230,14 +230,14 @@ public class Login_page_test_case extends base {
 		    	else if(i==2) {mail="ghi@gmail.com";}
 		    send(mail,apage1.getEmail());
 			clickaction(apage1.getSubmit());
-			Thread.sleep(4000);
+			tablewait();
 			String text = apage1.getErrormess().getAttribute("textContent");
 		    Assert.assertTrue(text.equals("من فضلك ادخل البريد الالكتروني المسجل"));
 		    apage1.getEmail().clear();
 		   }
 		   send(s3,apage1.getEmail());
 			clickaction(apage1.getSubmit());
-			Thread.sleep(4000);
+			tablewait();
 			String text = apage1.getErrormess().getAttribute("textContent");
 		    Assert.assertTrue(text.equals("من فضلك ادخل البريد الالكتروني المسجل "));
 		    URLmail();
