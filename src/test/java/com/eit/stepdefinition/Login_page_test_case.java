@@ -71,11 +71,11 @@ public class Login_page_test_case extends base {
 	@Parameters({ "CorporateId","Username","password" })
 	@Test(priority=3)
    public void English_Valid_Login(String s1,String s2,String s3) {
-	   Loginpage pagea1= new Loginpage();
-	   waits(pagea1.getCoopId());
+	   Loginpage pagea1= new Loginpage();	   
 	   GridViewpage page2 = new GridViewpage();
 	   waits(pagea1.getCoopId());
 	   langu(pagea1.getLang()).selectByIndex(1);
+	   waits(pagea1.getCoopId());
 	   send(s1,pagea1.getCoopId());
 	   send(s2,pagea1.getUsername());
 	   send(s3,pagea1.getPassword());
@@ -87,10 +87,10 @@ public class Login_page_test_case extends base {
 	   @Test(priority=4)
 	   public void Arabic_Valid_Login(String s1,String s2,String s3) {
 		   Loginpage page1a= new Loginpage();
-		   waits(page1a.getCoopId());
 		   GridViewpage page2 = new GridViewpage();
 		   waits(page1a.getCoopId());
 		   langu(page1a.getLang()).selectByIndex(2);
+		   waits(page1a.getCoopId());
 		   send(s1,page1a.getCoopId());
 		   send(s2,page1a.getUsername());
 		   send(s3,page1a.getPassword());
