@@ -232,7 +232,7 @@ public class Login_page_test_case extends base {
 			clickaction(apage1.getSubmit());
 			tablewait();
 			String text = apage1.getErrormess().getAttribute("textContent");
-		    Assert.assertTrue(text.equals("من فضلك ادخل البريد الالكتروني المسجل"));
+		    Assert.assertTrue(text.equals("من فضلك ادخل البريد الالكتروني المسجل"),"Arabic_Forget_password_Entering_invalid_Email_ID_and_clicking_Submit_button_3_times_sequentially_and_after_that_enter_valid_Email_Id_and_click_Submit_enter_the_received_password_and_Click_login Expected Result : it should show [من فضلك ادخل البريد الالكتروني المسجل] but it shows "+text);
 		    apage1.getEmail().clear();
 		   }
 		   send(s3,apage1.getEmail());
