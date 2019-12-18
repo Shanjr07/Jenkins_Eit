@@ -50,6 +50,7 @@ public class Login_page_test_case extends base {
 	   Loginpage page1= new Loginpage();
 	   waits(page1.getCoopId());
 	   langu(page1.getLang()).selectByIndex(1);
+	   waits(page1.getCoopId());
 	   send(s1,page1.getCoopId());
 	   send(s2,page1.getUsername());
 	   send(s3,page1.getPassword());
@@ -71,6 +72,7 @@ public class Login_page_test_case extends base {
 	@Test(priority=3)
    public void English_Valid_Login(String s1,String s2,String s3) {
 	   Loginpage pagea1= new Loginpage();
+	   waits(pagea1.getCoopId());
 	   GridViewpage page2 = new GridViewpage();
 	   waits(pagea1.getCoopId());
 	   langu(pagea1.getLang()).selectByIndex(1);
@@ -85,6 +87,7 @@ public class Login_page_test_case extends base {
 	   @Test(priority=4)
 	   public void Arabic_Valid_Login(String s1,String s2,String s3) {
 		   Loginpage page1a= new Loginpage();
+		   waits(page1a.getCoopId());
 		   GridViewpage page2 = new GridViewpage();
 		   waits(page1a.getCoopId());
 		   langu(page1a.getLang()).selectByIndex(2);
@@ -100,6 +103,7 @@ public class Login_page_test_case extends base {
 	   public void English_and_Arabic_Login_RememeberMe(String s1,String s2,String s3){
 	   Loginpage page1= new Loginpage();
 	   GridViewpage page2 = new GridViewpage();
+	   waits(page1.getCoopId());
 	   langu(page1.getLang()).selectByIndex(1);
 	   waits(page1.getCoopId());
 	   send(s1,page1.getCoopId());
@@ -128,6 +132,7 @@ public class Login_page_test_case extends base {
 	     @Test(priority=6)
 	   public void English_and_Arabic_ForgetPassword_with_incorrect_Corporate_ID_or_User_name(String s1,String s2,String s3) throws InterruptedException {
 		   Loginpage page1= new Loginpage();
+		   waits(page1.getCoopId());
 		   langu(page1.getLang()).selectByIndex(1);
 		   waits(page1.getCoopId());
 		   send(s1,page1.getCoopId());
@@ -154,7 +159,7 @@ public class Login_page_test_case extends base {
 	   @Test(priority=7)
 	   public void English_Forget_password_Entering_invalid_Email_ID_and_clicking_Submit_button_3_times_sequentially_and_after_that_enter_valid_Email_Id_and_click_Submit_enter_the_received_password_and_Click_login(String s1,String s2,String s3) throws InterruptedException, AWTException 
 	   {   Loginpage page1= new Loginpage();
-		   
+	       waits(page1.getCoopId());
 		   langu(page1.getLang()).selectByIndex(1);
 		   waits(page1.getCoopId());
 		   send(s1,page1.getCoopId());
@@ -220,6 +225,7 @@ public class Login_page_test_case extends base {
 	   public void Arabic_Forget_password_Entering_invalid_Email_ID_and_clicking_Submit_button_3_times_sequentially_and_after_that_enter_valid_Email_Id_and_click_Submit_enter_the_received_password_and_Click_login(String s1,String s2,String s3) 
 			   throws InterruptedException, AWTException {
 		   Loginpage apage1= new Loginpage();
+		   waits(apage1.getCoopId());
 		   langu(apage1.getLang()).selectByIndex(2);
 		   waits(apage1.getCoopId());
 		   send(s1,apage1.getCoopId());
