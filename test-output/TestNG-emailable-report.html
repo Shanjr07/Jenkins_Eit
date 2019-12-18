@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG Report</title>
+<style type="text/css">
+table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}
+td,th {border:1px solid #009;padding:.25em .5em}
+.result th {vertical-align:bottom}
+.param th {padding-left:1em;padding-right:1em}
+.param td {padding-left:.5em;padding-right:2em}
+.stripe td,.stripe th {background-color: #E6EBF9}
+.numi,.numi_attn {text-align:right}
+.total td {font-weight:bold}
+.passedodd td {background-color: #0A0}
+.passedeven td {background-color: #3F3}
+.skippedodd td {background-color: #CCC}
+.skippedodd td {background-color: #DDD}
+.failedodd td,.numi_attn {background-color: #F33}
+.failedeven td,.stripe .numi_attn {background-color: #D00}
+.stacktrace {white-space:pre;font-family:monospace}
+.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="testOverview">
+<tr><th>Test</th><th># passed</th><th># skipped</th><th># failed</th><th>Start<br/>Time</th><th>End<br/>Time</th><th>Total<br/>Time(hh:mm:ss)</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
+<tr><th colspan="10">Eit-Track</th></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1"><b>Login_TestCase</b></a></td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">10:10:55</td></td>
+<td class="numi">10:11:21</td></td>
+<td class="numi">00:00:26</td><td class="numi"></td><td class="numi"></td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
+<tr><th>Class</th><th>Method</th><th>Exception</th><th>Start Time </th><th>Time<br/>(hh:mm:ss)</th></tr>
+<tr><th colspan="5">Eit-Track</th></tr>
+<tr id="t1"><th colspan="5">Login_TestCase &#8212; failed</th></tr>
+<tr class="failedodd"><td>com.eit.stepdefinition.Login_page_test_case</td><td><a href="#m1"><b>English_and_Arabic_Login_with_incorrect_Corporate_ID_or_User_name</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em">java.lang.AssertionError: English_Login_with_incorrect_Corporate_ID_or_User_name = Expected Result:Enter Correct CorporateID or User name but it shows -&gt;Upgrading to newer version. expected [true] but found [false]<br/></td><td style="text-align:right">10:11:02</td><td class="numi">00:00:18</td></tr>
+</table>
+<h1>Login_TestCase</h1>
+<h2 id="m1">com.eit.stepdefinition.Login_page_test_case:English_and_Arabic_Login_with_incorrect_Corporate_ID_or_User_name</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Param.1</th><th>Param.2</th><th>Param.3</th></tr>
+<tr class="param stripe"><td>AAAA</td>
+<td>demo-ca</td>
+<td>12345</td>
+</tr>
+<tr><td colspan="3">
+<div class="stacktrace">java.lang.AssertionError: English_Login_with_incorrect_Corporate_ID_or_User_name = Expected Result:Enter Correct CorporateID or User name but it shows -&gt;Enter Valid Corporate Id expected [true] but found [false]
+	at com.eit.stepdefinition.Login_page_test_case.English_and_Arabic_Login_with_incorrect_Corporate_ID_or_User_name(Login_page_test_case.java:36)
+... Removed 27 stack frames</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">com.eit.stepdefinition.Login_page_test_case:English_and_Arabic_Login_with_incorrect_Corporate_ID_or_User_name</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Param.1</th><th>Param.2</th><th>Param.3</th></tr>
+<tr class="param stripe"><td>AAAA</td>
+<td>demo-ca</td>
+<td>12345</td>
+</tr>
+<tr><td colspan="3">
+<div class="stacktrace">java.lang.AssertionError: English_Login_with_incorrect_Corporate_ID_or_User_name = Expected Result:Enter Correct CorporateID or User name but it shows -&gt;Upgrading to newer version. expected [true] but found [false]
+	at com.eit.stepdefinition.Login_page_test_case.English_and_Arabic_Login_with_incorrect_Corporate_ID_or_User_name(Login_page_test_case.java:36)
+... Removed 27 stack frames</div>
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<center> SCREENSHOTS</center>
+</body></html>

@@ -29,15 +29,16 @@
   </listeners>
        <test name="Login_TestCase">
     <classes>
-      <class name="com.eit.stepdefinition.Login_page_test_case"/>
-    <!--    
+      <class name="com.eit.stepdefinition.Login_page_test_case">
+        
       <methods>
-                <include name ="Arabic_Valid_Login"/>
+              
          
       <include name ="English_and_Arabic_Login_with_incorrect_Corporate_ID_or_User_name"/>
-      <include name ="English_Login_with_incorrect_Password"/>
-     
-    
+      
+   <!--  
+     <include name ="Arabic_Valid_Login"/>
+    <include name ="English_Login_with_incorrect_Password"/>
         <include name ="Arabic_Forget_password_Entering_invalid_Email_ID_and_clicking_Submit_button_3_times_sequentially_and_after_that_enter_valid_Email_Id_and_click_Submit_enter_the_received_password_and_Click_login"/> 
           <include name ="English_Login_without_Username"/>  
          
@@ -51,10 +52,10 @@
      <include name ="English_forgetpassword_with_incorrect_password_and_valid_password"/>
      <include name ="Arabic_forgetpassword_with_incorrect_password_and_valid_password"/>
    
-      
+    -->   
      
     </methods>  </class>
-    --> 
+    
     </classes>
   </test> <!-- Test -->
 

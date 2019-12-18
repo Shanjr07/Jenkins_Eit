@@ -23,6 +23,7 @@ public class Login_page_test_case extends base {
    @Test(priority=1)
    public void English_and_Arabic_Login_with_incorrect_Corporate_ID_or_User_name(String s1,String s2,String s3)  {
 	   Loginpage page1= new Loginpage();
+	   waits(page1.getCoopId());
 	   langu(page1.getLang()).selectByIndex(1);
 	   waits(page1.getCoopId());
 	   send(s1,page1.getCoopId());
@@ -47,8 +48,8 @@ public class Login_page_test_case extends base {
    @Test(priority=2)
    public void English_Login_with_incorrect_Password(String s1,String s2,String s3) throws InterruptedException {
 	   Loginpage page1= new Loginpage();
-	   langu(page1.getLang()).selectByIndex(1);
 	   waits(page1.getCoopId());
+	   langu(page1.getLang()).selectByIndex(1);
 	   send(s1,page1.getCoopId());
 	   send(s2,page1.getUsername());
 	   send(s3,page1.getPassword());
@@ -71,8 +72,8 @@ public class Login_page_test_case extends base {
    public void English_Valid_Login(String s1,String s2,String s3) {
 	   Loginpage pagea1= new Loginpage();
 	   GridViewpage page2 = new GridViewpage();
-	   langu(pagea1.getLang()).selectByIndex(1);
 	   waits(pagea1.getCoopId());
+	   langu(pagea1.getLang()).selectByIndex(1);
 	   send(s1,pagea1.getCoopId());
 	   send(s2,pagea1.getUsername());
 	   send(s3,pagea1.getPassword());
@@ -85,8 +86,8 @@ public class Login_page_test_case extends base {
 	   public void Arabic_Valid_Login(String s1,String s2,String s3) {
 		   Loginpage page1a= new Loginpage();
 		   GridViewpage page2 = new GridViewpage();
-		   langu(page1a.getLang()).selectByIndex(2);
 		   waits(page1a.getCoopId());
+		   langu(page1a.getLang()).selectByIndex(2);
 		   send(s1,page1a.getCoopId());
 		   send(s2,page1a.getUsername());
 		   send(s3,page1a.getPassword());
