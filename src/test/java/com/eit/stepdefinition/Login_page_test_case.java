@@ -21,11 +21,12 @@ public class Login_page_test_case extends base {
 	}
    @Parameters({ "CorporateId_Invalid","Username","password" })
    @Test(priority=1)
-   public void English_and_Arabic_Login_with_incorrect_Corporate_ID_or_User_name(String s1,String s2,String s3)  {
+   public void English_and_Arabic_Login_with_incorrect_Corporate_ID_or_User_name(String s1,String s2,String s3) throws InterruptedException  {
 	   Loginpage page1= new Loginpage();
 	   waits(page1.getCoopId());
 	   langu(page1.getLang()).selectByIndex(1);
 	   waits(page1.getCoopId());
+	   Thread.sleep(1000);
 	   send(s1,page1.getCoopId());
 	   send(s2,page1.getUsername());
 	   send(s3,page1.getPassword());
@@ -51,6 +52,7 @@ public class Login_page_test_case extends base {
 	   waits(page1.getCoopId());
 	   langu(page1.getLang()).selectByIndex(1);
 	   waits(page1.getCoopId());
+	   Thread.sleep(1000);
 	   send(s1,page1.getCoopId());
 	   send(s2,page1.getUsername());
 	   send(s3,page1.getPassword());
@@ -70,12 +72,13 @@ public class Login_page_test_case extends base {
 	   }	   
 	@Parameters({ "CorporateId","Username","password" })
 	@Test(priority=3)
-   public void English_Valid_Login(String s1,String s2,String s3) {
+   public void English_Valid_Login(String s1,String s2,String s3) throws InterruptedException {
 	   Loginpage pagea1= new Loginpage();	   
 	   GridViewpage page2 = new GridViewpage();
 	   waits(pagea1.getCoopId());
 	   langu(pagea1.getLang()).selectByIndex(1);
 	   waits(pagea1.getCoopId());
+	   Thread.sleep(1000);
 	   send(s1,pagea1.getCoopId());
 	   send(s2,pagea1.getUsername());
 	   send(s3,pagea1.getPassword());
@@ -85,12 +88,13 @@ public class Login_page_test_case extends base {
 	   }
 	@Parameters({ "CorporateId","Username","password" })
 	   @Test(priority=4)
-	   public void Arabic_Valid_Login(String s1,String s2,String s3) {
+	   public void Arabic_Valid_Login(String s1,String s2,String s3) throws InterruptedException {
 		   Loginpage page1a= new Loginpage();
 		   GridViewpage page2 = new GridViewpage();
 		   waits(page1a.getCoopId());
 		   langu(page1a.getLang()).selectByIndex(2);
 		   waits(page1a.getCoopId());
+		   Thread.sleep(1000);
 		   send(s1,page1a.getCoopId());
 		   send(s2,page1a.getUsername());
 		   send(s3,page1a.getPassword());
@@ -100,12 +104,13 @@ public class Login_page_test_case extends base {
 	   }
 	@Parameters({ "CorporateId","Username","password" })
 	   @Test(priority=5)
-	   public void English_and_Arabic_Login_RememeberMe(String s1,String s2,String s3){
+	   public void English_and_Arabic_Login_RememeberMe(String s1,String s2,String s3) throws InterruptedException{
 	   Loginpage page1= new Loginpage();
 	   GridViewpage page2 = new GridViewpage();
 	   waits(page1.getCoopId());
 	   langu(page1.getLang()).selectByIndex(1);
 	   waits(page1.getCoopId());
+	   Thread.sleep(1000);
 	   send(s1,page1.getCoopId());
 	   send(s2,page1.getUsername());
 	   send(s3,page1.getPassword());
@@ -135,6 +140,7 @@ public class Login_page_test_case extends base {
 		   waits(page1.getCoopId());
 		   langu(page1.getLang()).selectByIndex(1);
 		   waits(page1.getCoopId());
+		   Thread.sleep(1000);
 		   send(s1,page1.getCoopId());
 		   send(s2,page1.getUsername()); 
 		   clickaction(page1.getForget());
@@ -162,6 +168,7 @@ public class Login_page_test_case extends base {
 	       waits(page1.getCoopId());
 		   langu(page1.getLang()).selectByIndex(1);
 		   waits(page1.getCoopId());
+		   Thread.sleep(1000);
 		   send(s1,page1.getCoopId());
 		   send(s2,page1.getUsername());
 		   clickaction(page1.getForget());
@@ -228,6 +235,7 @@ public class Login_page_test_case extends base {
 		   waits(apage1.getCoopId());
 		   langu(apage1.getLang()).selectByIndex(2);
 		   waits(apage1.getCoopId());
+		   Thread.sleep(1000);
 		   send(s1,apage1.getCoopId());
 		   send(s2,apage1.getUsername());
 		   clickaction(apage1.getForget());
