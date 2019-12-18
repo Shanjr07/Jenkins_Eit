@@ -233,6 +233,7 @@ public class Login_page_test_case extends base {
 			   throws InterruptedException, AWTException {
 		   Loginpage apage1= new Loginpage();
 		   waits(apage1.getCoopId());
+		   Thread.sleep(500);
 		   langu(apage1.getLang()).selectByIndex(2);
 		   waits(apage1.getCoopId());
 		   Thread.sleep(1000);
