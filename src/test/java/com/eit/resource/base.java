@@ -40,7 +40,7 @@ public class base {
 	public void openbrowser(String url) throws AWTException, InterruptedException {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
-		System.setProperty("webdriver.chrome.driver","E:\\Eit_track\\driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","\\var\\lib\\jenkins\\workspace\\Eit_track\\driver\\chromedriver.exe");
 		HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
 	    chromePrefs.put("credentials_enable_service", false);
         options.setExperimentalOption("prefs", chromePrefs);

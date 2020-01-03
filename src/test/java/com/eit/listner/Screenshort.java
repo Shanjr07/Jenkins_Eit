@@ -21,7 +21,7 @@ import com.eit.resource.base;
 
 public class Screenshort implements ITestListener {
 	WebDriver driver=null;
-	String filePath = "E:\\Eit_track\\Error_Screenshot\\";
+	String filePath = "\\var\\lib\\jenkins\\workspace\\EIt_test\\Report\\emailScreenshott";
     public void onTestFailure(ITestResult result) {
     	String methodName=result.getName().toString().trim();
         ITestContext context = result.getTestContext();
