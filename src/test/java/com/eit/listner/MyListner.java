@@ -42,8 +42,8 @@ public class MyListner implements ITestListener {
 TakesScreenshot ts = (TakesScreenshot) base.driv;
   File src = ts.getScreenshotAs(OutputType.FILE);
   try {
-   FileUtils.copyFile(src, new File("C:\\Users\\EIT-JAGADESHAN\\.jenkins\\workspace\\Maven_Eit\\REPORT\\Screenshot\\\\" + result.getMethod().getMethodName() + ".png"));
-   String file = test.addScreenCapture("C:\\Users\\EIT-JAGADESHAN\\.jenkins\\workspace\\Maven_Eit\\REPORT\\Screenshot\\\\" + result.getMethod().getMethodName() + ".png");
+   FileUtils.copyFile(src, new File("\\var\\lib\\jenkins\\workspace\\EIt_test\\Report\\ScreenShot" + result.getMethod().getMethodName() + ".png"));
+   String file = test.addScreenCapture("\\var\\lib\\jenkins\\workspace\\EIt_test\\Report\\ScreenShot" + result.getMethod().getMethodName() + ".png");
    test.log(LogStatus.FAIL, result.getMethod().getMethodName() + "test is failed", file);
    test.log(LogStatus.FAIL, result.getMethod().getMethodName() + "test is failed", result.getThrowable().getMessage());
   } catch (IOException e) {
@@ -61,12 +61,12 @@ TakesScreenshot ts = (TakesScreenshot) base.driv;
   System.out.println("on start");// Set the drivers path in environment variables to avoid code(System.setProperty())
 
   try {
-	FileUtils.forceDelete(new File("C:\\Users\\EIT-JAGADESHAN\\.jenkins\\workspace\\Maven_Eit\\REPORT\\Screenshot\\"));
+	FileUtils.forceDelete(new File("\\var\\lib\\jenkins\\workspace\\EIt_test\\Report\\ScreenShot"));
 } catch (IOException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
-  reports = new ExtentReports("C:\\Users\\EIT-JAGADESHAN\\.jenkins\\workspace\\Maven_Eit\\REPORT\\Screenshot\\Extend-reports.html");
+  reports = new ExtentReports("\\var\\lib\\jenkins\\workspace\\EIt_test\\Report\\ScreenShotREPORT\\Extend-reports.html");
  }
  public void onFinish(ITestContext context) {
   System.out.println("on finish");
